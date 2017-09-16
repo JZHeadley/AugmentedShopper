@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/topLayout"
     android:keepScreenOn="true"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical">
 
-    <com.jzheadley.augmentedshopper.CameraSourcePreview
+    <Button
+        android:id="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:onClick="tempLaunch"
+        android:text="Button" />
+
+    <com.jzheadley.augmentedshopper.googlevision.CameraSourcePreview
         android:id="@+id/preview"
         android:layout_height="match_parent"
         android:layout_width="match_parent">
 
-        <com.jzheadley.augmentedshopper.GraphicOverlay
+        <com.jzheadley.augmentedshopper.googlevision.GraphicOverlay
             android:id="@+id/faceOverlay"
             android:layout_height="match_parent"
             android:layout_width="match_parent" />
-    </com.jzheadley.augmentedshopper.CameraSourcePreview>
 
-</LinearLayout>
+    </com.jzheadley.augmentedshopper.googlevision.CameraSourcePreview>
+
+
+</RelativeLayout>

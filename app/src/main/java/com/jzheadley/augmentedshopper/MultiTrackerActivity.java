@@ -40,6 +40,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.jzheadley.augmentedshopper.googlevision.BarcodeTrackerFactory;
+import com.jzheadley.augmentedshopper.googlevision.CameraSourcePreview;
+import com.jzheadley.augmentedshopper.googlevision.FaceTrackerFactory;
+import com.jzheadley.augmentedshopper.googlevision.GraphicOverlay;
+
 import java.io.IOException;
 
 /**
@@ -77,6 +82,10 @@ public final class MultiTrackerActivity extends AppCompatActivity {
         }
     }
 
+    public void tempLaunch(View view) {
+        Intent intent = new Intent(view.getContext(), RecipesActivity.class);
+        startActivity(intent);
+    }
     /**
      * Handles the requesting of the camera permission.  This includes
      * showing a "Snackbar" message of why the permission is needed then

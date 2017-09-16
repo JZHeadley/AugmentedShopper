@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jzheadley.augmentedshopper;
+package com.jzheadley.augmentedshopper.googlevision;
 
 /**
  * Common base class for defining graphics for a particular item type.  This along with
@@ -27,12 +27,12 @@ abstract class TrackedGraphic<T> extends GraphicOverlay.Graphic {
         super(overlay);
     }
 
-    void setId(int id) {
-        mId = id;
-    }
-
     protected int getId() {
         return mId;
+    }
+
+    void setId(int id) {
+        mId = id;
     }
 
     abstract void updateItem(T item);
