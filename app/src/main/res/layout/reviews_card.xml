@@ -11,10 +11,15 @@
         android:layout_height="200dp"
         card_view:cardCornerRadius="4dp">
 
-        <TextView
-            android:id="@+id/info_text"
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/review_rating"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/review_content"/>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
