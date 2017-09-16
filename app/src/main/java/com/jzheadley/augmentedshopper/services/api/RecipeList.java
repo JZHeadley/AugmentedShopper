@@ -14,15 +14,18 @@ public class RecipeList {
     @SerializedName("count")
     @Expose
     public Integer count;
-    @SerializedName("recipes")
+    @SerializedName("RecipesActivity")
     @Expose
     public List<Recipe> recipes = null;
+
+    public RecipeList() {
+    }
 
     @Override
     public String toString() {
         return "RecipeList{" +
                 "count=" + count +
-                ", recipes=" + recipes +
+                ", RecipesActivity=" + recipes +
                 '}';
     }
 
@@ -40,8 +43,5 @@ public class RecipeList {
 
     public void setRecipes(List<Recipe> recipes) {
         this.recipes = recipes;
-    }
-
-    public RecipeList() {
     }
 }

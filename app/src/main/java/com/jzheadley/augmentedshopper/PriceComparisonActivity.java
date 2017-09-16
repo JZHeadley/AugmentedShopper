@@ -1,13 +1,13 @@
 package com.jzheadley.augmentedshopper;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class similar_items extends AppCompatActivity {
+public class PriceComparisonActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_similar_items);
+        setContentView(R.layout.activity_compare_prices);
     }
 }

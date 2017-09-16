@@ -17,20 +17,18 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class recipes extends AppCompatActivity {
+public class RecipesActivity extends AppCompatActivity {
 
+    private static final String TAG = "RecipesActivity";
     private FoodToForkApi foodToForkApi;
     private List<Recipe> recipes;
-    private static final String TAG = "recipes";
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
         foodToForkApi = new FoodToForkService().getFoodToForkApi();
-        foodToForkApi.searchRecipes("apiKey", "chicken")
+        foodToForkApi.searchRecipes("e3f92a5ea15f514626145a35d622d350", "chicken")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<RecipeList>() {
@@ -47,7 +45,7 @@ public class recipes extends AppCompatActivity {
 
                     @Override
                     public void onError(@NonNull Throwable e) {
-
+                        Log.e(TAG, "onError: ", e);
                     }
 
                     @Override
