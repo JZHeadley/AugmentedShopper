@@ -7,4 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.jzheadley.augmentedshopper.similar_items">
 
+
+
 </android.support.constraint.ConstraintLayout>
