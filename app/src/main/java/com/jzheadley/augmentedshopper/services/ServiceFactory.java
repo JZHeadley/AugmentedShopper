@@ -35,7 +35,7 @@ class ServiceFactory {
                 .baseUrl(endPoint)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
-                .client(okHttpClient)
+                .client(builder.build())
                 .build();
         return retrofit.create(clazz);
     }

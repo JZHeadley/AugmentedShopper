@@ -36,7 +36,7 @@ public class recipes extends AppCompatActivity {
                 .subscribe(new Observer<RecipeList>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-
+                        Log.d(TAG, "onSubscribe: Subscribed");
                     }
 
                     @Override
@@ -52,12 +52,13 @@ public class recipes extends AppCompatActivity {
 
                     @Override
                     public void onComplete() {
-
+                        Log.d(TAG, "onComplete: finished");
                     }
                 });
     }
 
     public void setRecipes(List<Recipe> recipes) {
+        Log.d(TAG, "setRecipes: Recipes Are" + recipes);
         this.recipes = recipes;
     }
 }
