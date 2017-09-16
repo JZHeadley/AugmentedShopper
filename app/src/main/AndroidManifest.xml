@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jzheadley.augmentedshopper">
+          package="com.jzheadley.augmentedshopper">
 
     <application
         android:allowBackup="true"
@@ -11,10 +11,20 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".item_view">
+        </activity>
+        <activity android:name=".compare_prices">
+        </activity>
+        <activity android:name=".reviews">
+        </activity>
+        <activity android:name=".recipes">
+        </activity>
+        <activity android:name=".similar_items">
         </activity>
     </application>
 
