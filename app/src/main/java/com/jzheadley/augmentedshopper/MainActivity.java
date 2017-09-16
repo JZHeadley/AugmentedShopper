@@ -13,8 +13,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void tempLaunch(View view) {
-        Intent intent = new Intent(view.getContext(), RecipesActivity.class);
+    public void goToReviews(View view) {
+        Intent intent = new Intent(MainActivity.this, ReviewsActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToRecipes(View view) {
+        Intent intent = new Intent(MainActivity.this, RecipesActivity.class);
         startActivity(intent);
     }
 

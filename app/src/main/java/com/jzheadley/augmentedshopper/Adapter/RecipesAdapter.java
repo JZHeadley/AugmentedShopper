@@ -13,10 +13,6 @@ import com.jzheadley.augmentedshopper.services.api.Recipe;
 
 import java.util.List;
 
-/**
- * Created by Courtney on 9/16/2017.
- */
-
 public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipeViewHolder> {
 
     private List<Recipe> recipes;
@@ -55,9 +51,9 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipeVi
 
         public RecipeViewHolder(View itemView) {
             super(itemView);
-            ratingBar = (AppCompatRatingBar) itemView.findViewById(R.id.recipe_ratingBar);
-            imageView = (ImageView) itemView.findViewById(R.id.recipe_image);
-            recipeTitle = (TextView) itemView.findViewById(R.id.recipe_title);
+            ratingBar = itemView.findViewById(R.id.recipe_ratingBar);
+            imageView = itemView.findViewById(R.id.recipe_image);
+            recipeTitle = itemView.findViewById(R.id.recipe_title);
         }
     }
 
