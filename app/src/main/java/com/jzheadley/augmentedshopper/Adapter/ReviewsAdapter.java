@@ -13,10 +13,10 @@ import com.jzheadley.augmentedshopper.services.api.Review;
 
 import java.util.List;
 
-public class review_adapter extends RecyclerView.Adapter<review_adapter.ReviewViewHolder> {
+public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ReviewViewHolder> {
     List<Review> reviews;
 
-    public review_adapter(List<Review> reviews) {
+    public ReviewsAdapter(List<Review> reviews) {
         this.reviews = reviews;
     }
 

@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.jzheadley.augmentedshopper.Adapter.review_adapter;
+import com.jzheadley.augmentedshopper.Adapter.ReviewsAdapter;
 import com.jzheadley.augmentedshopper.services.api.Review;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class ReviewsActivity extends AppCompatActivity {
         review_card_rv.setLayoutManager(new LinearLayoutManager(this));
 
         initializeReviews();
-        review_adapter adapter = new review_adapter(reviews);
+        ReviewsAdapter adapter = new ReviewsAdapter(reviews);
         review_card_rv.setAdapter(adapter);
     }
 

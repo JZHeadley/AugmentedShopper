@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToReviews(View view) {
-        Intent intent = new Intent(MainActivity.this, reviews.class);
+        Intent intent = new Intent(MainActivity.this, ReviewsActivity.class);
         startActivity(intent);
     }
 
