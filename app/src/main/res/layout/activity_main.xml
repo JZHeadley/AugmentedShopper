@@ -9,7 +9,7 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Hello World!"
+        android:text="gimmie that good good"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -24,7 +24,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Pump that shit"
         android:onClick="tempLaunch"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
