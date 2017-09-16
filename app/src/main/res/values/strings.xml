@@ -2,4 +2,6 @@
     <string name="app_name">AugmentedShopper</string>
     <string name="similar_item_title">Item title</string>
     <string name="similar_item_description">similar item description</string>
+    <string name="reviews">Reviews</string>
+    <string name="recipes">Recipes</string>
 </resources>
