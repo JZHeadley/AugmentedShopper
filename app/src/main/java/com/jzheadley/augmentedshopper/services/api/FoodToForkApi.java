@@ -6,7 +6,7 @@ import retrofit2.http.Query;
 
 public interface FoodToForkApi {
 
-    @GET("")
+    @GET("search")
     Observable<RecipeList> searchRecipes(@Query("key") String apiKey, @Query("q") String searchString);
 
 }

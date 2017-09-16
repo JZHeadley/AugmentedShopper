@@ -5,9 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.jzheadley.augmentedshopper.services.FoodToForkService;
-import com.jzheadley.augmentedshopper.services.api.FoodToForkApi;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToRecipes(View view) {
-        Intent intent = new Intent(MainActivity.this, recipes.class);
+        Intent intent = new Intent(MainActivity.this, RecipesActivity.class);
         startActivity(intent);
     }
 

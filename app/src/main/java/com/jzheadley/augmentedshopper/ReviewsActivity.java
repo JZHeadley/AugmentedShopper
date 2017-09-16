@@ -11,7 +11,7 @@ import com.jzheadley.augmentedshopper.services.api.Review;
 import java.util.ArrayList;
 import java.util.List;
 
-public class reviews extends AppCompatActivity {
+public class ReviewsActivity extends AppCompatActivity {
     private List<Review> reviews;
 
     @Override
