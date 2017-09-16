@@ -10,37 +10,41 @@ import com.google.gson.annotations.SerializedName;
 public class Recipe {
     @SerializedName("publisher")
     @Expose
-    public String publisher;
-    @SerializedName("social_rank")
-    @Expose
-    public Double socialRank;
+    private String publisher;
     @SerializedName("f2f_url")
     @Expose
-    public String f2fUrl;
-    @SerializedName("publisher_url")
-    @Expose
-    public String publisherUrl;
+    private String f2fUrl;
     @SerializedName("title")
     @Expose
-    public String title;
+    private String title;
     @SerializedName("source_url")
     @Expose
-    public String sourceUrl;
-    @SerializedName("page")
+    private String sourceUrl;
+    @SerializedName("recipe_id")
     @Expose
-    public Integer page;
+    private String recipeId;
+    @SerializedName("image_url")
+    @Expose
+    private String imageUrl;
+    @SerializedName("social_rank")
+    @Expose
+    private Double socialRank;
+    @SerializedName("publisher_url")
+    @Expose
+    private String publisherUrl;
 
-    @Override
-    public String toString() {
-        return "Recipe{" +
-                "publisher='" + publisher + '\'' +
-                ", socialRank=" + socialRank +
-                ", f2fUrl='" + f2fUrl + '\'' +
-                ", publisherUrl='" + publisherUrl + '\'' +
-                ", title='" + title + '\'' +
-                ", sourceUrl='" + sourceUrl + '\'' +
-                ", page=" + page +
-                '}';
+    public Recipe() {
+    }
+
+    public Recipe(String publisher, String f2fUrl, String title, String sourceUrl, String recipeId, String imageUrl, Double socialRank, String publisherUrl) {
+        this.publisher = publisher;
+        this.f2fUrl = f2fUrl;
+        this.title = title;
+        this.sourceUrl = sourceUrl;
+        this.recipeId = recipeId;
+        this.imageUrl = imageUrl;
+        this.socialRank = socialRank;
+        this.publisherUrl = publisherUrl;
     }
 
     public String getPublisher() {
@@ -51,28 +55,12 @@ public class Recipe {
         this.publisher = publisher;
     }
 
-    public Double getSocialRank() {
-        return socialRank;
-    }
-
-    public void setSocialRank(Double socialRank) {
-        this.socialRank = socialRank;
-    }
-
     public String getF2fUrl() {
         return f2fUrl;
     }
 
     public void setF2fUrl(String f2fUrl) {
         this.f2fUrl = f2fUrl;
-    }
-
-    public String getPublisherUrl() {
-        return publisherUrl;
-    }
-
-    public void setPublisherUrl(String publisherUrl) {
-        this.publisherUrl = publisherUrl;
     }
 
     public String getTitle() {
@@ -91,15 +79,49 @@ public class Recipe {
         this.sourceUrl = sourceUrl;
     }
 
-    public Integer getPage() {
-        return page;
+    public String getRecipeId() {
+        return recipeId;
     }
 
-    public void setPage(Integer page) {
-        this.page = page;
+    public void setRecipeId(String recipeId) {
+        this.recipeId = recipeId;
     }
 
-    public Recipe() {
+    public String getImageUrl() {
+        return imageUrl;
+    }
 
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public Double getSocialRank() {
+        return socialRank;
+    }
+
+    public void setSocialRank(Double socialRank) {
+        this.socialRank = socialRank;
+    }
+
+    public String getPublisherUrl() {
+        return publisherUrl;
+    }
+
+    public void setPublisherUrl(String publisherUrl) {
+        this.publisherUrl = publisherUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Recipe{" +
+                "publisher='" + publisher + '\'' +
+                ", f2fUrl='" + f2fUrl + '\'' +
+                ", title='" + title + '\'' +
+                ", sourceUrl='" + sourceUrl + '\'' +
+                ", recipeId='" + recipeId + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", socialRank=" + socialRank +
+                ", publisherUrl='" + publisherUrl + '\'' +
+                '}';
     }
 }

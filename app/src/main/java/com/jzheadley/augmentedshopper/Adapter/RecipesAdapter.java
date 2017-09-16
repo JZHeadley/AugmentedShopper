@@ -1,6 +1,7 @@
 package com.jzheadley.augmentedshopper.Adapter;
 
 import android.support.v7.widget.AppCompatRatingBar;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +35,13 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipeVi
         Recipe recipe = recipes.get(position);
         holder.recipeTitle.setText(recipe.getTitle());
         holder.ratingBar.setRating(Float.parseFloat(recipe.getSocialRank() + ""));
-
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Intent intent = new Intent(view.getContext(), RecipesActivity.class);
+                // view.getContext().startActivity(intent);
+            }
+        });
 
     }
 
@@ -45,15 +52,17 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipeVi
 
 
     static class RecipeViewHolder extends RecyclerView.ViewHolder {
+        CardView cardView;
         AppCompatRatingBar ratingBar;
         ImageView imageView;
         TextView recipeTitle;
 
         public RecipeViewHolder(View itemView) {
             super(itemView);
-            ratingBar = itemView.findViewById(R.id.recipe_ratingBar);
-            imageView = itemView.findViewById(R.id.recipe_image);
-            recipeTitle = itemView.findViewById(R.id.recipe_title);
+            cardView = (CardView) itemView.findViewById(R.id.recipe_card);
+            ratingBar = (AppCompatRatingBar) itemView.findViewById(R.id.recipe_ratingBar);
+            imageView = (ImageView) itemView.findViewById(R.id.recipe_image);
+            recipeTitle = (TextView) itemView.findViewById(R.id.recipe_title);
         }
     }
 
