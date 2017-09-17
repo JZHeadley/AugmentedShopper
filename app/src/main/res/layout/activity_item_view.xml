@@ -46,15 +46,14 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="246dp"
         />
-    <android.support.v7.widget.AppCompatRatingBar
+    <RatingBar
         android:id="@+id/recipe_ratingBar"
-        
+        style="?android:ratingBarStyleSmall"
+        android:theme="@style/RatingBar"
+        android:onClick="reviewSwitcher"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:numStars="5"
-        android:rating="5.0"
-        android:scaleX=".5"
-        android:scaleY=".5"
         android:stepSize="1.0" />
 
 </LinearLayout>
