@@ -9,14 +9,16 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
-        <android.support.v7.widget.AppCompatRatingBar
+        <RatingBar
             android:id="@+id/review_rating"
+            style="?android:ratingBarStyleSmall"
             android:theme="@style/RatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="7dp"
             android:numStars="5"
             android:rating="5.0"
             android:stepSize="1.0"/>
@@ -27,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/review_rating"
             android:text="@string/review_content"
-            android:textSize="25sp"/>
+            android:textSize="20sp"/>
 
     </RelativeLayout>
 

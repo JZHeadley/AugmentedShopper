@@ -82,10 +82,16 @@ public final class MultiTrackerActivity extends AppCompatActivity {
         }
     }
 
-    public void tempLaunch(View view) {
+    public void goToRecipes(View view) {
         Intent intent = new Intent(view.getContext(), RecipesActivity.class);
         startActivity(intent);
     }
+
+    public void goToReviews(View view) {
+        Intent intent = new Intent(view.getContext(), ReviewsActivity.class);
+        startActivity(intent);
+    }
+
     /**
      * Handles the requesting of the camera permission.  This includes
      * showing a "Snackbar" message of why the permission is needed then
