@@ -9,4 +9,7 @@
     <string name="reviews">Reviews</string>
     <string name="recipes">Recipes</string>
     <string name="review_content">Review Content</string>
+    <string name="stores_button_text">Compare prices</string>
+    <string name="recipes_button_text">Find recipes</string>
+    <string name="similar_items_button_text">Similar Items</string>
 </resources>

@@ -91,6 +91,10 @@ public final class MultiTrackerActivity extends AppCompatActivity {
         Intent intent = new Intent(view.getContext(), ReviewsActivity.class);
         startActivity(intent);
     }
+    public void goToMain(View view) {
+        Intent intent = new Intent(view.getContext(), ItemActivity.class);
+        startActivity(intent);
+    }
 
     /**
      * Handles the requesting of the camera permission.  This includes

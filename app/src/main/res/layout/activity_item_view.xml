@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context="com.jzheadley.augmentedshopper.ItemActivity">
+    tools:context="com.jzheadley.augmentedshopper.ItemActivity"
+    android:weightSum="6"
+    android:orientation="vertical"
+    >
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/product_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp" />
+    <Button
+        android:id="@+id/stores_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/stores_button_text"
+        android:onClick="storeSwitcher"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="246dp"
+        />
+    <Button
+        android:id="@+id/recipes_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/recipes_button_text"
+        android:onClick="recipeSwitcher"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="246dp"
+        />
+    <Button
+        android:id="@+id/similar_items_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/similar_items_button_text"
+        android:onClick="similarSwitcher"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="246dp"
+        />
+    <android.support.v7.widget.AppCompatRatingBar
+        android:id="@+id/recipe_ratingBar"
+        
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:numStars="5"
+        android:rating="5.0"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:stepSize="1.0" />
+
+</LinearLayout>

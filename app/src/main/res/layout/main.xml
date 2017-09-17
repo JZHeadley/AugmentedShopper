@@ -21,6 +21,13 @@
         android:layout_below="@id/reviews_button"
         android:onClick="goToRecipes"
         android:text="@string/recipes"/>
+    <Button
+        android:id="@+id/tempButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipes"
+        android:onClick="goToMain"
+        android:text="Test"/>
 
     <com.jzheadley.augmentedshopper.googlevision.CameraSourcePreview
         android:id="@+id/preview"
