@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 
 import com.jzheadley.augmentedshopper.Adapter.RecipesAdapter;
 import com.jzheadley.augmentedshopper.services.FoodToForkService;
@@ -84,4 +85,6 @@ public class RecipesActivity extends AppCompatActivity {
         }
         return topResults;
     }
+
+
 }
