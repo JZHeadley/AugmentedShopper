@@ -2,13 +2,13 @@ package com.jzheadley.augmentedshopper.Adapter;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.widget.AppCompatRatingBar;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.support.v7.app.AppCompatActivity;
 
@@ -63,14 +63,14 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipeVi
 
     static class RecipeViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
-        AppCompatRatingBar ratingBar;
+        RatingBar ratingBar;
         ImageView imageView;
         TextView recipeTitle;
 
         public RecipeViewHolder(View itemView) {
             super(itemView);
             cardView = (CardView) itemView.findViewById(R.id.recipe_card);
-            ratingBar = (AppCompatRatingBar) itemView.findViewById(R.id.recipe_ratingBar);
+            ratingBar = (RatingBar) itemView.findViewById(R.id.recipe_ratingBar);
             imageView = (ImageView) itemView.findViewById(R.id.recipe_image);
             recipeTitle = (TextView) itemView.findViewById(R.id.recipe_title);
         }

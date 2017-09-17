@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     tools:context="com.jzheadley.augmentedshopper.SimilarItemsActivity">
 
-
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/similarItem_recyclerview"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
 
 </android.support.constraint.ConstraintLayout>

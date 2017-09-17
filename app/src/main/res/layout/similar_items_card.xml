@@ -1,54 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/similar_item_card"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="200dp"
+    android:layout_gravity="center">
 
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:padding="24dp">
 
-        card_view:cardCornerRadius="4dp">
+        <ImageView
+            android:id="@+id/similar_item_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="24dp">
+        <TextView
+            android:id="@+id/similar_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/similar_item_title"
+            android:textSize="24sp" />
 
-            <ImageView
-                android:id="@+id/similar_item_image"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/similar_item_ratingBar"
+            android:text="@string/similar_item_description" />
 
-            <TextView
-                android:id="@+id/similar_item_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/similar_item_title"
-                android:textSize="24sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/similar_item_description"
-                android:layout_below="@+id/similar_item_name"
-                />
+        <RatingBar
+            android:id="@+id/similar_item_ratingBar"
+            style="?android:ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/similar_item_name"
+            android:numStars="5"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:stepSize="1.0"
+            android:theme="@style/RatingBar" />
 
-            <android.support.v7.widget.AppCompatRatingBar
-                android:id="@+id/similar_item__ratingBar"
-                android:layout_below="@+id/similar_item_name"
-                android:scaleX=".5"
-                android:scaleY=".5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:stepSize="1.0"
-                android:rating="5.0" />
+    </RelativeLayout>
 
-        </RelativeLayout>
+</android.support.v7.widget.CardView>
 
-    </android.support.v7.widget.CardView>
-</LinearLayout>

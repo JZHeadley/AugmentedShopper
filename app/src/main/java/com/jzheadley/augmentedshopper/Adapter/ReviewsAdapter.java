@@ -14,22 +14,19 @@ import com.jzheadley.augmentedshopper.services.api.Review;
 import java.util.List;
 
 public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ReviewViewHolder> {
-    List<Review> reviews;
+
+    private List<Review> reviews;
 
     public ReviewsAdapter(List<Review> reviews) {
         this.reviews = reviews;
     }
 
     @Override
-    public int getItemCount() {
-        return reviews.size();
-    }
-
-    @Override
     public ReviewViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.reviews_card, viewGroup, false);
-        ReviewViewHolder rvh = new ReviewViewHolder(v);
-        return rvh;
+        View v = LayoutInflater
+                .from(viewGroup.getContext())
+                .inflate(R.layout.reviews_card, viewGroup, false);
+        return new ReviewsAdapter.ReviewViewHolder(v);
     }
 
     @Override
@@ -38,6 +35,10 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ReviewVi
         reviewViewHolder.content.setText(reviews.get(i).getContent());
     }
 
+    @Override
+    public int getItemCount() {
+        return reviews.size();
+    }
 //    @Override
 //    public void onAttachedToRecylcerView(RecyclerView recyclerView) {
 //        super.onAttachedToRecyclerView(recyclerView);
@@ -50,7 +51,7 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.ReviewVi
 
         ReviewViewHolder(View itemView) {
             super(itemView);
-            cardView = itemView.findViewById(R.id.card_view);
+            cardView = itemView.findViewById(R.id.reviews_card);
             rating = itemView.findViewById(R.id.review_rating);
             content = itemView.findViewById(R.id.review_content);
         }
