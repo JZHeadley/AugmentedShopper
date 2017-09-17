@@ -1,5 +1,7 @@
 package com.jzheadley.augmentedshopper.Adapter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.AppCompatRatingBar;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.jzheadley.augmentedshopper.R;
 import com.jzheadley.augmentedshopper.services.api.Recipe;
 
@@ -32,14 +36,20 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipeVi
 
     @Override
     public void onBindViewHolder(RecipeViewHolder holder, int position) {
-        Recipe recipe = recipes.get(position);
+        final Recipe recipe = recipes.get(position);
         holder.recipeTitle.setText(recipe.getTitle());
         holder.ratingBar.setRating(Float.parseFloat(recipe.getSocialRank() + ""));
+        Glide.with(holder.cardView.getContext())
+                .load(recipe.getImageUrl())
+                .centerCrop()
+                .fitCenter()
+                .into(holder.imageView);
+
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Intent intent = new Intent(view.getContext(), RecipesActivity.class);
-                // view.getContext().startActivity(intent);
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(recipe.getF2fUrl()));
+                view.getContext().startActivity(browserIntent);
             }
         });
 
